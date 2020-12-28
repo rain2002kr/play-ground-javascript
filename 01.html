@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS 리셋 코드  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+    <link rel="stylesheet" href="css/01.css">
+
+    <link rel="icon" href="favicon.ico" />
+
+    <title>aync and defer</title>
+    <script src="src/00.variable.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header id="header"></header>
+        <header>
+            <h1>
+                <a href="index.html">자바스크립트 정리</a>
+            </h1>
+
+        </header>
+        <main>
+            <div class="content">
+                <h2>변수값</h2>
+                <h3>let</h3>
+                <ul>
+                    <li>
+                        <p>let ES6 에서 추가, let 은 변경 가능.</p>
+                    </li>
+
+                </ul>
+
+                <h3>var</h3>
+                <ul>
+                    <li>
+                        <p>var hoisting (어디에 선언되든 맨위로 끌어올려준다.</p>
+                    </li>
+                    <li>
+                        <p>또하나 {} var 는 블럭 스코프가 없다.</p>
+                    </li>
+                    <li>
+                        <p>선언하지도 않은 값들이 딸려오기 때문에 쓰지말라!</p>
+                    </li>
+                    <li>
+                        <p>최신 기능을 사용 할때는 인터넷익스플로로는 ES6를 지원안한다.</p>
+                    </li>
+                    <li>
+                        <p>정말 지원해야 한다면 바벰을 이용해서 컨버팅 한다.</p>
+                    </li>
+                </ul>
+                <h3>const</h3>
+                <ul>
+                    <li>
+                        <p>const 한번 선언후 값을 변경할수 없다.</p>
+                    </li>
+                    <li>
+                        <p>보안 강화, 쓰레드 안전, 개발자 실수 방지</p>
+                    </li>
+                    <li>
+                        <p>immutable data type</p>
+                    </li>
+                    <li>
+                        <p class="indent">security, thread safety, reduce human mistakes</p>
+                    </li>
+                </ul>
+
+                <h3>variable types</h3>
+                <ul>
+                    <li>
+                        <p>primitive, single item : number, string, boolean , null, undefined , symbol.</p>
+                    </li>
+                    <li>
+                        <p>object : box container</p>
+                    </li>
+                    <li>
+                        <p>function , first-class function 펑션도 데이터 타입으로 가능하므로 인자로 전달 가능.</p>
+                    </li>
+                    <li>
+                        <p>오류 상황 무한대 나오는 경우와 not a number 나오는 경우</p>
+                    </li>
+                </ul>
+                <h3>const</h3>
+                <ul>
+                    <li>
+                        <p>const 한번 선언후 값을 변경할수 없다.</p>
+                    </li>
+                    <li>
+                        <p>보안 강화, 쓰레드 안전, 휴먼미스테이크</p>
+                    </li>
+                    <li>
+                        <p>immutable data type</p>
+                    </li>
+                    <li>
+                        <p class="indent">security, thread safety, reduce human mistakes</p>
+                    </li>
+                </ul>
+                <h3>bigInt</h3>
+                <ul>
+                    <li>
+                        <p>const bigInt = 123456789010101010101010n;
+                        </p>
+                        <p> console.log(bigInt);</p>
+                    </li>
+                </ul>
+                <h3>string 백틱을 이용해서 사용</h3>
+                <ul>
+                    <li>
+                        <p>const char = "hello";
+
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            const bob = `hi ${char}`;
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            console.log(bob);</p>
+                    </li>
+                </ul>
+                <h3>boolean</h3>
+                <ul>
+                    <li>
+                        <p>false : 0 , null, undefined, NaN, ''</p>
+                    </li>
+                    <li>
+                        <p>null 과 undefined</p>
+                    </li>
+                    <li>
+                        <p>null 은 datatype 이고, undefined 는 선언만 되고 초기화가 안된것</p>
+                    </li>
+                </ul>
+                <h3>symbole</h3>
+                <ul>
+                    <li>
+                        <p>symbole, create unique identifiers for objects</p>
+                    </li>
+                    <li>
+                        <p>const symbol1 = Symbol("id");<br>
+                            const symbol2 = Symbol("id");<br>
+                            console.log(symbol1 === symbol2);<br>
+                            
+                            const gSymbol1 = Symbol.for("id");<br>
+                            const gSymbol2 = Symbol.for("id");<br>
+                            console.log(gSymbol1 === gSymbol2);<br>
+                            console.log(`value : ${symbol1.description}, type: ${typeof gSymbol1}`); //심볼 이용할때는 다음과 같이 사용</p>
+                    </li>
+                </ul>
+                <h3>다이나믹 타입핑 언어</h3>
+                <ul>
+                    <li>
+                        <p>타입이 다이나믹하게 런타임에서 선언된다.</p>
+                    </li>
+                    <li>
+                        <p>
+                            let text = "hello";<br>
+                            console.log(text.charAt(0));<br>
+                            console.log(`text : ${text}, type: ${typeof text}`); //심볼 이용할때는 다음과 같이 사용<br>
+                            text = 1;<br>
+                            console.log(`text : ${text}, type: ${typeof text}`); //심볼 이용할때는 다음과 같이 사용<br>
+                            text = "7" + 5;<br>
+                            console.log(`text : ${text}, type: ${typeof text}`); //심볼 이용할때는 다음과 같이 사용<br>
+                            text = "8" / "2";<br>
+                            console.log(`text : ${text}, type: ${typeof text}`); //심볼 이용할때는 다음과 같이 사용<br>
+                            </p>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

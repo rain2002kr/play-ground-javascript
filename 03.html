@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS 리셋 코드  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+    <link rel="stylesheet" href="css/03.css">
+
+    <link rel="icon" href="favicon.ico" />
+
+    <title>aync and defer</title>
+    <script src="src/00.variable.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header id="header"></header>
+        <header>
+            <h1>
+                <a href="index.html">자바스크립트 정리</a>
+            </h1>
+
+        </header>
+        <main>
+            <div class="content">
+                <h2>function 펑션</h2>
+                <h3>펑션 </h3>
+                <h4>1. 펑션 선언 </h4>
+                <ul>
+                    <li>
+                        <p>이름 짓는법 : doSomething, command, verb</p>
+                        <p>이름이 한가지로 정의 안될때는 함수 쪼개기</p>
+                    </li>
+                </ul>
+                <h4>2. 타입 스크립트</h4>
+                <ul>
+                    <li>
+                        <p>TypeScript playGround 에서 익혀 보기</p>
+                        <p>큰 프로젝트를 하는 경우는 타입스크립트 필요</p>
+                    </li>
+                </ul>
+                <h4>3. 함수 파라메터 primitive vs object </h4>
+                <ul>
+                    <li>
+                        <p>primitive </p>
+                        <p>passed by value 값이 전달</p>
+                        <p>object </p>
+                        <p>passed by reference 주소값 전달</p>
+                        
+                    </li>
+                </ul>
+                <h4>4. Default 파라메터 </h4>
+                <ul>
+                    <li>
+                        <p>ES6 에 추가 </p>
+                        <p>파라메터에 값이 전달되지 않을때, Default 로 선언된 값이 들어감 </p>
+                        <p>function showMessage(message, from = 'default')</p>
+                        
+                    </li>
+                </ul>
+                <h4>5. rest parameter ...</h4>
+                <ul>
+                    <li>
+                        <p>function printAll(...args){</p>
+                        <p>for(const arg of args){ console.log(arg); }</p>
+                        <p>args.forEach((arg) => console.log(arg))</p>
+                    </li>
+                </ul>
+                <h4>6. 로컬 스코프</h4>
+                <ul>
+                    <li>
+                        <p>클로저 : 부모함수 에서 자식함수 안에 접근 가능 </p>
+                        <p>스코프 개념 : 밖에서는 안이 보이지 않고 안에서만 밖을 볼수 있다.</p>
+                        <p>let global = "show";</p>
+                        <p>function local (){ let local = "in";</p>
+                        <p>console.log(local); //접근 안됨</p>
+                    </li>
+                </ul>
+
+                <h4>7. 코드 팁</h4>
+                <ul>
+                    <li>
+                        <p>조건이 맞이 않으면 함수를 종료하고 조건이 맞을때만 함수 로직 실행</p>
+                    </li>
+                </ul>
+
+                <h4>8. 펑션 기능 : 이름이 있는 경우 vs 없는 경우 </h4>
+                <ul>
+                    <li>
+                        <p>const fc = function (){return false;} </p>
+                        <p>const fc = function named(){return false;} </p>
+                        <p>디버깅 할때 스택트레이스에 쌓이기 때문에 named 펑션을 쓰는것이 좋다.</p>
+                    </li>
+                </ul>
+                <h4>9. 콜백 함수 : 펑션을 인자로 사용 가능  </h4>
+                <ul>
+                    <li>
+                        <p>function randomQuiz(answer, printYes, printNo){</p>
+                            <p>if (answer === 'love you'){ printYes();} </p>
+                            <p>else { printNo();} </p>
+                    </li>
+                </ul>
+                <h4>10. 화살표 함수 : 애로우 펑션   </h4>
+                <ul>
+                    <li>
+                        <p>const add = (인자) => { 리턴 } </p>
+                        <p>const add = (a, b) => { a + b } </p>
+                    </li>
+                </ul>
+
+                <h4>11. 즉시 함수 : IIFE Immediately Invoked Function Express   </h4>
+                <ul>
+                    <li>
+                        <p>( function(){ } )();</p>
+                        <p>위처럼 함수 감싸고, 바로 호출</p>
+                        <p>( ()=>console.log("test") ),()</p>
+                    </li>
+                </ul>
+
+
+
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
