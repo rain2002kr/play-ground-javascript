@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS 리셋 코드  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+    <link rel="stylesheet" href="css/00.css">
+    
+    <link rel="icon" href="favicon.ico" />
+
+    <title>aync and defer</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <header id="header"></header>
+        <header>
+            <h1>
+                <a href="index.html">자바스크립트 정리</a>
+            </h1>
+
+        </header>
+        <main>
+            <div class="content">
+                <h2>자바스크립트 소스 불러 올때 async 와 defer 의 차이점</h2>
+                    <h3>async</h3>
+                        <p>html 문서 파싱중, 스크립트에 async = true 값이 되면 병렬로 스크립트 파일을 다운받고 먼저 다운 받는대로 바로 실행</p>
+                    <h3>defer</h3>
+                        <p>html 파싱중, 스크립트에 defer = true 값이 되면 병렬로 다운받고 html 파싱 완료후 스크립트 파일을 순차적으로 실행</p>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

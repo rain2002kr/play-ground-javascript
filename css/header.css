@@ -1,0 +1,30 @@
+/* HEADER */
+.container{
+    max-width: 980px;
+    margin: auto;
+    background-color: #e5e5e5;
+}
+header{
+    background-color: lightcoral;
+}
+
+header h1{
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header h1 a{
+    transition: 0.4s;
+}
+
+header h1 a:hover{
+    color: lightcyan;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

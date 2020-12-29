@@ -1,0 +1,27 @@
+/* @import 'header.css'; */
+@import url('header.css');
+
+main{
+    background-color: cornsilk;
+    max-width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+nav{
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+nav ul li {
+    padding: 10px;
+    box-sizing: border-box;
+}
+nav ul li a{
+    transition: 0.4s;
+}
+
+
+nav ul li a:hover{
+    color:lightcoral
+}
