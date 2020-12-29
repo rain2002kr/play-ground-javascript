@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS 리셋 코드  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+    <link rel="stylesheet" href="css/06.css" />
+
+    <link rel="icon" href="favicon.ico" />
+
+    <title>aync and defer</title>
+    <script src="src/06.array.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header"></header>
+      <header>
+        <h1>
+          <a href="index.html">자바스크립트 정리</a>
+        </h1>
+      </header>
+      <main>
+        <div class="content">
+          <h2>배열 Array</h2>
+          <h4>1. 배열 만드는 방법</h4>
+          <ul>
+            <li>
+              <p>obj1 = [];</p>
+              <p>obj2 = new Array();</p>
+            </li>
+          </ul>
+          <h4>2. push, pop, unshift, shift, splice 펑션 Array 인터페이스 함수</h4>
+          <ul>
+            <li>
+              <p>push : array 끝에 data 추가 </p>
+              <p>pop  : array 끝에 data 삭제 </p>
+              <p>unshift : array 앞에 data 추가 </p>
+              <p>shift : array 앞에 data 삭제 </p>
+              <p>splice : array ( 시작점, 수량, 추가분 )</p>
+            </li>
+          </ul>
+          <h4>3. concat, set, join, slice, sort, reverse, indexOf, forEach, filter, map ,flat</h4>
+          <ul>
+            <li>
+              <p>오브젝트 할당을 함수로 하는 방법</p>
+              <p>매개변수와 리턴값이 같으면, 생략이 가능</p>
+              <p>
+                함수에 기능이 없다면, 생성자형으로 만드는것이 일반적인 관례임.
+              </p>
+              <p>
+                new 키워드와 대문자, 콘솔로 찍으면 이름이 나옴. (이 방식 추천)
+              </p>
+            </li>
+          </ul>
+          <h4>4. in operator 키의 유무를 확인</h4>
+          <ul>
+            <li>
+              <p>console.log('name' in khlee)</p>
+              <p>키의 이뮤를 확인하고 true, false 값을 리턴해준다.</p>
+            </li>
+          </ul>
+          <h4>5. 반복 출력 for in 오브젝트 and for of 배열</h4>
+          <ul>
+            <li>
+              <p>오브젝트를 순회 하는 for in</p>
+              <p>배열을 순회하는 for of</p>
+              <p>복합형은 추후 확인</p>
+            </li>
+          </ul>
+          <h4>6. 오브젝트 Assign 클로닝</h4>
+          <ul>
+            <li>
+              <p>레퍼런스값 복사 및 할당</p>
+              <p>for 문을 통한 복사</p>
+              <p>오브젝트 Assign 을 통한 복사</p>
+            </li>
+          </ul>
+          <h4>7. 자바스크립트 ref.</h4>
+          <ul>
+            <li>
+              <p>
+                <a
+                  href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference"
+                  >MDN 사이트</a
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

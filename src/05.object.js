@@ -140,3 +140,38 @@
   const mixed3 = Object.assign([{}],array3,array4,sss);
   console.log(mixed3);
 }
+
+
+// 오브젝트 KEYS, VALUES, ENTRYS 
+// Object.keys(obj) – 키가 담긴 배열을 반환합니다.
+// Object.values(obj) – 값이 담긴 배열을 반환합니다.
+// Object.entries(obj) – [key, value] 쌍이 담긴 배열을 반환합니다.
+{
+console.clear();
+let user = {
+  name: "John",
+  age: 30
+};
+  console.log(Object.keys(user));c
+  console.log(Object.values(user));
+  console.log(Object.entries(user));
+  let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+  };
+
+  const map= Object.entries(salaries)//.map((key,value)=>{[key,value]});
+  let sum=0;
+  for(let val of map){
+    console.log(val[1]);
+    sum += val[1];
+  }
+  console.log(sum);
+
+  for(let val in salaries){
+    console.log(salaries[val]);
+  }
+
+
+}
