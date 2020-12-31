@@ -16,4 +16,16 @@
     symbol : Symbol 로 같은 이름을 붙여도 메모리 주소값이 다름. 
 
     다이나믹 타이핑 언어 : 타입 스크립트 권장.
-#
+
+# JSON 
+    OBJ TO JSON 
+        JSON.stringfy(obj) 
+        JSON.stringfy(obj,['replacer']) 
+        JSON.stringfy(obj,(key,value)=>value==="first_key"?"replacer":value) 
+         
+
+    JSON TO OBJ 
+        JSON.parse(json) 
+        JSON.parse(json,(key,value)=>value==="first_key"?"replacer":value)
+
+
