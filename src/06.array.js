@@ -187,7 +187,7 @@
 {
  console.clear();
  // Using slice, create newCar from myCar.
-let myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }
+let myHonda = {color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }
 let myCar = [myHonda, 2, 'cherry condition', 'purchased 1997']
 let newCar = myCar.slice(0, 2)
 
@@ -201,10 +201,13 @@ let obj = JSON.parse(json);
 console.log('myCar Json parse = ' + obj);
 console.log(Object.keys(obj));
 console.log(Object.values(obj));
-let vals = Object.values(obj)
-for(let k of vals){
-  console.log(k);
+let myCarE = Object.values(obj)
+for(let car of myCarE){
+  console.log(car);
 }
+console.log('TEST');
+console.log(myCarE);
+
 console.log(Object.entries(obj));
 
 // console.log('newCar = ' + JSON.stringify(newCar))

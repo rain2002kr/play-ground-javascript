@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS 리셋 코드  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+  <link rel="stylesheet" href="css/07.css" />
+
+  <link rel="icon" href="favicon.ico" />
+
+  <title>aync and defer</title>
+  <script src="src/07.json.js" defer></script>
+  <!-- <script src="src/06-1.array2.js" defer></script> -->
+</head>
+
+<body>
+  <div class="container">
+    <header id="header"></header>
+    <header>
+      <h1>
+        <a href="index.html">자바스크립트 정리</a>
+      </h1>
+    </header>
+    <main>
+      <div class="content">
+        <h2>JSON </h2>
+        <h4>1. OBJ TO JSON 만드는 방법</h4>
+        <ul>
+          <li>
+            <p>JSON.stringfy()</p>
+            <p>대체자 [] (obj,[""])</p>
+            <p>대체자 콜백 (obj,(obj,value)=>{value})</p>
+          </li>
+        </ul>
+        <h4>2. JSON TO OBJ 만드는 방법</h4>
+        <ul>
+          <li>
+            <p>JSON.parse()</p>
+            <p>리바이벌 콜백 (obj,(obj,value)=>{value})</p>
+          </li>
+        </ul>
+        <h4>3. AJAX</h4>
+        <ul>
+          <li>
+            <p>웹페이지에서 동적으로 서버로 데이터를 주고 받을수 있는 기술을 의미한다</p>
+          </li>
+        </ul>
+        <h4>4. XMLHttpRequest XHR </h4>
+        <ul>
+          <li>
+            <p>XMLHttpRequest API 를 이용하여 통신 가능.</p>
+            <p>약자로 XHR  오브젝트</p>
+            <p>브라우저 API에서 제공하는 오브젝트중의 하나임</p>
+            <p>	이 오브젝트를 이용하면, 간단하게 서버에 데이터를 요청하고 받아올수가 있다. 
+            </p>
+            <p>	XML 은 파일 커지고 가독성 안좋아서 요즘 많이 사용 안함. 
+            </p>
+
+          </li>
+        </ul>
+        <h4>5. FETCH API </h4>
+        <ul>
+          <li>
+            <p>최근 브라우저에 추가된 최신 API 임 (내장 API)</p>
+            <p>인터넷 익스플로러에 제공안됨</p>
+          </li>
+        </ul>
+        <h4>6. XHR 이름 관련 개발 이야기 </h4>
+        <ul>
+          <li>
+            <p>마이크로소프트 아웃룩팀이 AJAX 와 XHR 통신 관련 개발에 적극 참여</p>
+            <p>이때 XML 파일포멧을 사용했는데 XHR 은 XML 데이터만 주고받는게 아니지만</p>
+            <p>HttpRequest 앞에 XML 에 따서 XMLHttpRequest 로 이름을 짓고, 약자로 XHR 이라고함</p>
+          </li>
+        </ul>
+
+        <h4>7. JSON 관련 유용 사이트</h4>
+        <ul>
+          <li>
+            <p>
+              <a href="http://www.jsondiff.com/">JSON DIFF </a>
+              <a href="https://jsonbeautifier.org/">JSON Beautifier </a>
+              <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference">JSON Parser </a>
+              <a href="https://jsonformatter.curiousconcept.com/">JSON Validator </a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
