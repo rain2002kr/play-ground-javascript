@@ -22,6 +22,7 @@
     set age(value){
       this._age = value < 0 ? 0 :value;
     }
+    
   }
 
   const khlee = new Info('khlee',55);

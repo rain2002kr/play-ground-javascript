@@ -2,41 +2,44 @@
 @import url('header.css');
 
 /* MAIN  */
-main{
-    background-color: cornsilk;
+main {
+    background-color: black;
     max-width: 70%;
     margin: auto;
+    color: #e5e5e5;
 }
 
-.content{
+.content {
     padding: 10px 20px;
     box-sizing: border-box;
 }
 
-.content h2{
+.content h2 {
     font-size: 20px;
-    padding :10px
+    padding: 10px
 }
 
-.content h3{
-    font-size : 14px;
-    padding-top :12px;
-    padding-bottom :12px;
+.content h3 {
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
-.content h4{
-    font-size : 14px;
-    padding-top :12px;
-    padding-bottom :12px;
+
+.content h4 {
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 
-.content p{
-    font-size : 10px;
-    padding :2px;
+.content p {
+    font-size: 10px;
+    padding: 2px;
     margin-left: 10px;
     line-height: 18px;
-    
+
 }
-.content .indent{
+
+.content .indent {
     margin-left: 30px;
 }

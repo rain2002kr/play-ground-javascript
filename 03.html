@@ -11,7 +11,7 @@
     <link rel="icon" href="favicon.ico" />
 
     <title>aync and defer</title>
-    <script src="src/00.variable.js" defer></script>
+    <script src="src/03.function.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <header id="header"></header>
         <header>
             <h1>
-                <a href="index.html">자바스크립트 정리</a>
+                <a href="index.html">JS </a>
             </h1>
 
         </header>
@@ -48,7 +48,7 @@
                         <p>passed by value 값이 전달</p>
                         <p>object </p>
                         <p>passed by reference 주소값 전달</p>
-                        
+
                     </li>
                 </ul>
                 <h4>4. Default 파라메터 </h4>
@@ -57,7 +57,7 @@
                         <p>ES6 에 추가 </p>
                         <p>파라메터에 값이 전달되지 않을때, Default 로 선언된 값이 들어감 </p>
                         <p>function showMessage(message, from = 'default')</p>
-                        
+
                     </li>
                 </ul>
                 <h4>5. rest parameter ...</h4>
@@ -94,15 +94,15 @@
                         <p>디버깅 할때 스택트레이스에 쌓이기 때문에 named 펑션을 쓰는것이 좋다.</p>
                     </li>
                 </ul>
-                <h4>9. 콜백 함수 : 펑션을 인자로 사용 가능  </h4>
+                <h4>9. 콜백 함수 : 펑션을 인자로 사용 가능 </h4>
                 <ul>
                     <li>
                         <p>function randomQuiz(answer, printYes, printNo){</p>
-                            <p>if (answer === 'love you'){ printYes();} </p>
-                            <p>else { printNo();} </p>
+                        <p>if (answer === 'love you'){ printYes();} </p>
+                        <p>else { printNo();} </p>
                     </li>
                 </ul>
-                <h4>10. 화살표 함수 : 애로우 펑션   </h4>
+                <h4>10. 화살표 함수 : 애로우 펑션 </h4>
                 <ul>
                     <li>
                         <p>const add = (인자) => { 리턴 } </p>
@@ -110,7 +110,7 @@
                     </li>
                 </ul>
 
-                <h4>11. 즉시 함수 : IIFE Immediately Invoked Function Express   </h4>
+                <h4>11. 즉시 함수 : IIFE Immediately Invoked Function Express </h4>
                 <ul>
                     <li>
                         <p>( function(){ } )();</p>
@@ -118,6 +118,16 @@
                         <p>( ()=>console.log("test") ),()</p>
                     </li>
                 </ul>
+
+                <h4>12. 생성자 함수 : 오브젝트와 함께 사용 </h4>
+                <ul>
+                    <li>
+                        <p>function Person(name,age) {return name, age}</p>
+                        <p>함수를 돌려주고 싶다면, 변수에 함수를 담아서, return 값에 추가 해줌</p>
+                        <p>function Person(name,age) {const fc = ()=>{log('something')}; return name, age, fc}</p>
+                    </li>
+                </ul>
+
 
 
 

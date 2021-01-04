@@ -1,4 +1,7 @@
 'use stric';
+const log = (m) => {console.log(m)};
+const clr = () =>{console.clear();};
+
 // 1. 오브젝트 만드는 방법 두가지 
 {
   const obj = {name:"khlee"};
@@ -12,7 +15,6 @@
 }
 // 2. 오브젝트 다이나믹 할당 및 삭제(추천안함)
 {
-  console.clear();
   const obj = {name:"khlee"};
   console.log(obj);
   obj.hasjob = "no job"
@@ -23,7 +25,6 @@
 }
 // 3. 오브젝트를 함수형 + 생성자형 함수형 
 {
-  console.clear();
   function makeObject(name,age){
     return{
       name:name,
@@ -55,7 +56,6 @@
 
 // 4. in 오퍼레이터로 키가 있는지 없는지 확인
 {
-  console.clear();
   const khlee = {name:"leekh"};
   console.log("name" in khlee);
   if("name" in khlee){
@@ -65,7 +65,6 @@
 
 // 5. 오브젝트 순회 for in , 배열 순회 for of
 {
-  console.clear();
   const obj ={name:"leekh", age:39};
   const array = ["leekh", 29, "male"];
   const mixed = [{name:"leekh", age:39},{name:"cjs", age:38}];
@@ -97,7 +96,7 @@
 
 // 6. 클로닝 [1. 레퍼런스복사, 2. for 복사, 3 Object Assign 복사]
 {
-  console.clear();
+  //console.clear();
   const obj ={name:"leekh", age:39};
   const array = ["leekh", 29, "male"];
 
@@ -147,12 +146,12 @@
 // Object.values(obj) – 값이 담긴 배열을 반환합니다.
 // Object.entries(obj) – [key, value] 쌍이 담긴 배열을 반환합니다.
 {
-console.clear();
+//console.clear();
 let user = {
   name: "John",
   age: 30
 };
-  console.log(Object.keys(user));c
+  console.log(Object.keys(user));
   console.log(Object.values(user));
   console.log(Object.entries(user));
   let salaries = {
