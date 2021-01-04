@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS 리셋 코드  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+  <link rel="stylesheet" href="css/08.css" />
+
+  <link rel="icon" href="favicon.ico" />
+
+  <title>aync and defer</title>
+  <script src="src/08.callback.js" defer></script>
+  <!-- <script src="src/06-1.array2.js" defer></script> -->
+</head>
+
+<body>
+  <div class="container">
+    <header id="header"></header>
+    <header>
+      <h1>
+        <a href="index.html">JS </a>
+      </h1>
+    </header>
+    <main>
+      <div class="content">
+        <h2>CALLBACK </h2>
+        <h4>1. 추후 함수를 불러달라고 예약하는 콜백</h4>
+        <ul>
+          <li>
+            <p>함수의 실행 순서는, 변수나 함수 호이스팅에 의해 맨위로 올라가고 순차적으로 실행 됨.</p>
+            <p>setTimeOut 같은 비동기 처리 함수를 만나면, 백그라운드에서 대기 </p>
+            <p>태스크큐 이벤트 발생후 백그라운드에서 태스트큐로 타이머나 이벤트 리스너와 콜백 함수를 보낸다.</p>
+          </li>
+        </ul>
+        <h4>2. 함수의 인자로 입력과 출력을 표현</h4>
+        <ul>
+          <li>
+            <p>콜백 함수의 입력과 출력을 구분하기가 어려움</p>
+            <p>콜백 지옥에 빠지기 쉬움 (코드를 읽기가 어렵고 복잡함)</p>
+          </li>
+        </ul>
+        
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

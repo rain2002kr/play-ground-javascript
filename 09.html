@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS 리셋 코드  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+  <link rel="stylesheet" href="css/09.css" />
+
+  <link rel="icon" href="favicon.ico" />
+
+  <title>aync and defer</title>
+  <script src="src/09.promise.js" defer></script>
+  <!-- <script src="src/06-1.array2.js" defer></script> -->
+</head>
+
+<body>
+  <div class="container">
+    <header id="header"></header>
+    <header>
+      <h1>
+        <a href="index.html">JS </a>
+      </h1>
+    </header>
+    <main>
+      <div class="content">
+        <h2>Promise </h2>
+        <h4>1. 콜백 지옥에서 구해주는 프로미스</h4>
+        <ul>
+          <li>
+            <p>콜백 함수는 입력과 출력의 구분이 어렵다. </p>
+            <p>콜백 함수의 복잡성을 조금 간편하게 해준다.</p>
+            <p>function login(id,passwd){return new Promise(resolve,rejected){}}</p>
+            <p>login(id,passwd).then()</p>
+          </li>
+        </ul>
+        
+        
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
