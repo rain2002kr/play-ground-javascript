@@ -49,6 +49,7 @@
         return new Promise(resolve,rejected){ resolve() rejected()}
     }
     loginUser(id,passwd).then((user)=> {log(user)})
+    test
     
     
 
