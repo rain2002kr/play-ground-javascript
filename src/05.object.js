@@ -1,4 +1,6 @@
 'use stric';
+const clr = () => console.clear();
+const log = (m) => console.log(m);
 // 1. 오브젝트 만드는 방법 두가지 
 {
   const obj = {name:"khlee"};
@@ -152,7 +154,7 @@ let user = {
   name: "John",
   age: 30
 };
-  console.log(Object.keys(user));c
+  console.log(Object.keys(user));
   console.log(Object.values(user));
   console.log(Object.entries(user));
   let salaries = {
@@ -173,5 +175,46 @@ let user = {
     console.log(salaries[val]);
   }
 
+}
 
+// 오브젝트 비구조화 할당
+{
+  //console.clear();
+  clr();
+  log('START 비구조화 할당')
+  const obj = {name:"leekh", age:"39"};
+
+  log(obj.name);
+  log(obj.age);
+  
+  print(obj);
+
+  function print({age}){
+    //const  = objs;
+    //log(name);
+    log(age);  
+  }
+}
+
+// 오브젝트 안에 함수 할당하기 
+{
+  clr();
+  log('스타트 오브젝트 안에 함수')
+  const Dog ={
+    speak : '멍멍',
+    //named function
+    say : function named(){
+      log(this.speak);
+    },
+    //unnamed function
+    say : function(){
+      log(this.speak);
+    },
+    //function 생략형
+    say(){
+      log(this.speak);
+    },
+    //화살표 함수는 사용하지 말길...
+ }
+ Dog.say();
 }
