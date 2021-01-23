@@ -3,9 +3,10 @@
 
 /* MAIN  */
 main{
-    background-color: cornsilk;
+    background-color: #000;
     max-width: 70%;
     margin: auto;
+    color: aliceblue;
 }
 
 .content{

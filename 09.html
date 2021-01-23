@@ -29,14 +29,44 @@
         <h4>1. 콜백 지옥에서 구해주는 프로미스</h4>
         <ul>
           <li>
+            <p>자바스크립트에 내장되어 있는 OBJECT 이다.</p>
+            <p>프로미스는 프로듀서 파트가 있다. function promise_fc(id,pass){ return new Promise ...</p>
+            <p>프로미스는 컨슈머 파트가 있다. promise_fc(id,pass).then().catch().finally()</p>
             <p>콜백 함수는 입력과 출력의 구분이 어렵다. </p>
-            <p>콜백 함수의 복잡성을 조금 간편하게 해준다.</p>
+            <p>콜백 함수의 복잡성을 간편하게 해준다.</p>
             <p>function login(id,passwd){return new Promise(resolve,rejected){}}</p>
             <p>login(id,passwd).then()</p>
           </li>
         </ul>
-        
-        
+        <h4>2. 프로미스 프로듀서 문법 </h4>
+        <ul>
+          <li>
+            <p>function producer(id,pass){ return new Promise((resolve, reject) => { if(조건)resolve(리턴값) else reject(new
+              Error("리턴값"))(</p>
+            <p> new Promise((resolve,reject) => { 이부분 유의</p>
+            <p>resolve : 제대로 처리 되었을때 콜백 함수로 호출 됨.</p>
+            <p>reject : 에러 처리 되었을때 콜백 함수로 호출 됨.</p>
+          </li>
+        </ul>
+        <h4>3. 프로미스 컨슈머 문법 </h4>
+        <ul>
+          <li>
+            <p>.then() : 함수 안쪽에 resolve 에서 return 한 값이 들어옴</p>
+            <p>.then((message)=>console.log(message)) : 다음과 같이 입력 파라미터와 출력 매개변수가 한개고 같다면 다음과 같이 생략이 가능하다.</p>
+            <p>.then(console.log)</p>
+            <p>.catch() : 함수 안쪽에 reject 에서 return 한 값이 들어옴</p>
+            <p>.finally() : 함수 안쪽에 resolve 혹은 reject 함수 실행후 항상 실행되어 진다.</p>
+            <p> 항상 함수 형태로 실행해야 한다. .finally(()=>{ console.log("finally 실행")})</p>
+          </li>
+        </ul>
+        <h4>4. 프로미스 체이닝 </h4>
+        <ul>
+          <li>
+            <p>.then().then().then().catch() : 프로미스를 순차적으로 실행하고 싶을때 다음과 같은 형태로 체이닝이 가능함.</p>
+          </li>
+        </ul>
+
+
       </div>
     </main>
   </div>
