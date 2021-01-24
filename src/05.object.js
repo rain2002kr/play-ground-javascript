@@ -177,7 +177,7 @@ let user = {
 
 }
 
-// 오브젝트 비구조화 할당
+// 오브젝트 비구조화 할당 (오브젝트 분해하는것)
 {
   //console.clear();
   clr();
@@ -218,3 +218,57 @@ let user = {
  }
  Dog.say();
 }
+
+// 오브젝트 안에 getter 와 setter 함수를 사용하자
+{
+  clr();
+  log('START 오브젝트 안에 GET and SET 함수')
+  const number ={
+    a : 3,
+    b : 5,
+    calculate(){
+      log('계산함수')
+      return this.a + this.b;
+    }
+  }
+
+  log(number);
+  log(number.calculate())
+
+  const numbers ={
+    _a : 3,
+    _b : 5,
+    _sum : 0,
+    calculate(){
+      log('계산함수')
+      return this._sum = this._a + this._b;
+    },
+    get sum(){
+      return this._sum;
+    },
+    get a(){
+      return this._a;
+    },
+    set a(a){
+      this._a = a;
+      this.calculate();
+    },
+    get b(){
+      return this._a;
+    },
+    set b(b){
+      this._b = b;
+      this.calculate();
+    }
+  }
+
+  log(numbers);
+  log(numbers.a=5);
+
+  log(numbers.sum);
+  numbers.b = 3;
+  log(numbers.sum);
+  log(numbers.sum);
+  log(numbers.sum);
+}
+
