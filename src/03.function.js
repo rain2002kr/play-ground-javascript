@@ -146,7 +146,7 @@ const simpleMultiplay = (a, b) => {
 })();
 
 const cal = function calculate(cmd, a, b) {
-  switch(cmd) {
+  switch (cmd) {
     case "add":
       add2(a, b)
       break;
@@ -170,11 +170,11 @@ const sub2 = (a, b) => console.log(`a - b = ${a-b}`);
 const div2 = (a, b) => console.log(`a / b = ${a/b}`);
 const mul2 = (a, b) => console.log(`a * b = ${a*b}`);
 
-cal("div",8,4);
+cal("div", 8, 4);
 
 
 //IIFE Test
-( ()=>console.log("IIFE Test") )();
+(() => console.log("IIFE Test"))();
 
 
 // . Constuctor function 함수 
@@ -184,8 +184,8 @@ function Person(name, age) {
     age,
   };
 }
-//const person4 = new Person("person4", 35);
-//log(person4);
+const person4 = new Person('person4', 29);
+log(person4);
 
 const person5 = new Person1("ccccs", 33);
 
@@ -198,4 +198,84 @@ function Person1(name, age) {
   this.name = name;
   this.age = age;
   // return this; // 이게 생략
+}
+
+// 5. 펑션안에 펑션 넣기 
+// return 할때 중괄호 잊지 말기 
+{
+  function Person_fc(name, age) {
+    const introduce = () => {
+      log(`안녕하세요.${name} 입니다.`)
+    }
+    const changeName = (m) => {
+      name = m;
+      log(`이름을 바꿉니다.${name} 입니다.`);
+    }
+    return {
+      name,
+      age,
+      introduce,
+      changeName
+    }
+  }
+
+  const person6 = Person_fc('이경훈', 38);
+  person6.introduce();
+  person6.changeName('최지선');
+  person6.introduce();
+
+}
+
+// 6. 펑션에 프로토 타입 적용하기 
+// return 할때 생략형 쓰지 말기 -> this.type = type 
+{
+  function Animal(type, say) {
+    this.type = type;
+    this.say = say;
+  }
+
+  const dog = new Animal('개', '멍멍')
+  const cat = new Animal('고양이', '야옹야옹')
+
+  Animal.prototype.speak = function () {
+    log(this.say);
+  }
+  dog.speak();
+  cat.speak();
+
+}
+
+// 7. 펑션에 프로토타입, 객체 생성자 상속 하기  
+{
+  function Computer(type, maker) {
+    this.type = type;
+    this.maker = maker;
+  }
+  Computer.prototype.speak = function () {
+    log(`안녕~! ${this.type} 이야`)
+  }
+
+  // const desktop = new Computer('desktop',"intel");
+  // const laptop = new Computer('laptop',"amd");
+  // desktop.speak();
+  // laptop.speak();
+
+  // 1단계 call(this,매겨변수)
+  function Desktop(maker) {
+    Computer.call(this, "Desktop", maker);
+  }
+
+  function Laptop(maker) {
+    Computer.call(this, "Laptop", maker);
+  }
+  // 2단계 prototype
+  Desktop.prototype = Computer.prototype;
+  Laptop.prototype = Computer.prototype;
+
+  const desktop = new Desktop("intel");
+  const laptop = new Laptop("amd");
+  desktop.speak();
+
+
+
 }

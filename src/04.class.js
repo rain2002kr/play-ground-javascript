@@ -1,11 +1,14 @@
 'use stric';
+const log = (m)=>console.log(m);
+const clr = ()=> console.clear();
+
 {
   class Info {
     constructor(name, age){
       this.name = name;
       this.age = age;
     }
-    // methode
+    // methode -> 프로토타입으로 지정 된다. 
     introduce(){
       this.speakName();
       this.speakAge();
@@ -120,5 +123,48 @@
   const inst1 = new Class('khlee');
   console.log(inst1 instanceof Class);
   console.log(inst1 instanceof Object);
+}
+
+// 클래스 활용 예시 
+{
+  clr();
+  log('클래스 활용 예시 시작');
+  class Food {
+    constructor(type){
+      this.type = type;
+      this.brands = [];
+    }
+    addBrands(brand){
+      this.brands.push(brand);
+      log('추가되었습니다.')
+    }
+    printAll(){
+      this.brands.forEach(item=>log(item));
+    }
+  }
+
+  const pizza = new Food("피자");
+  const chicken = new Food("치킨");
+
+  pizza.addBrands('도미노')
+  pizza.addBrands('피자헛')
+  pizza.printAll();
+  log(pizza);
+  log(pizza.brands)
+
+  chicken.addBrands('교촌치킨')
+  chicken.addBrands('호식이')
+  chicken.addBrands('호치킨')
+  log(chicken);
+
+  //합칠때는 다음과 같이 합치면 중복에 대해서는 알아서 해지한다. 
+  const complex = {pizza,chicken,chicken,pizza};
+  log('complex');
+  log(complex);
+
+  const ch = complex['chicken'];
+  const piz = complex.pizza;
+  log(ch);
+
 }
 

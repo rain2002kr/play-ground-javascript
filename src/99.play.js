@@ -7,45 +7,37 @@ const clr = () => {
 };
 // 연습장
 {
-    log('스타트 연습장');
-    const data = [{
-        id: 1,
-        name: "이경훈"
-    }, {
-        id: 2,
-        name: "최지선"
-    },
-    {
-        id: 2,
-        name: "이은서"
-    }]
+    class Food {
+        constructor(name){
+            this.name = name;
+            this.brands = [];
+        }
+        addBrand(brand){
+            this.brands.push(brand);
+        }
+        print(){
+            log(`${this.name} 을 하는 음식점들`)
+            log(this.brands.join(', '));
+        }
+    }
 
-    const arr =[10,20,30,40];
-    //slice , splice 
-    const sliced = arr.slice(0,3);
-    log(sliced);
-    log(arr);
-    
-    const spliced = arr.splice(0,2,1000);
-    log(spliced);
-    log(arr);
+    const pizza = new Food('피자');
+    pizza.addBrand('피자헛');
+    pizza.addBrand('도미너 피자');
 
+    const chicken = new Food('치킨');
+    chicken.addBrand('굽네치킨');
+    chicken.addBrand('네네치킨');
 
-
-
-
-
+    pizza.print();
+    chicken.print();
+    log(pizza);
+    log(chicken);
 
 
 
 
-    
-
-
-
-
-
-
+  
 
 
 }

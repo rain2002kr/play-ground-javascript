@@ -11,7 +11,7 @@
     <link rel="icon" href="favicon.ico" />
 
     <title>aync and defer</title>
-    <script src="src/00.variable.js" defer></script>
+    <script src="src/03.function.js" defer></script>
 </head>
 
 <body>
@@ -125,6 +125,18 @@
                         <p>function Person(name,age) {return name, age}</p>
                         <p>함수를 돌려주고 싶다면, 변수에 함수를 담아서, return 값에 추가 해줌</p>
                         <p>function Person(name,age) {const fc = ()=>{log('something')}; return name, age, fc}</p>
+                    </li>
+                </ul>
+                <h4>13. 프로토 타입  : 함수에서 공용으로 지정해서 함수 혹은 변수를 공유  </h4>
+                <ul>
+                    <li>
+                        <p>function Animal(type,say){this.type=type; this.say=say}</p>
+                        <p>Animal.prototype.speak = function() {log(this.say) }</p>
+                        <p>객체 생성자 상속하기</p>
+                        <p>1. 새로운 함수를 만들고 그안에서 상속할 함수를선언후.call(this,매개변수들....) call과 (this 가중요함.</p>
+                        <p>2. 그리고 prototype 선언 된것이나 사용 할것이 있다면 다음과 같이 선언해준다.</p>
+                        <p>Cat.prototype = Animal.prototype</p>
+                        
                     </li>
                 </ul>
 
