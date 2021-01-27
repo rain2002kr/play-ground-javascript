@@ -7,37 +7,24 @@ const clr = () => {
 };
 // 연습장
 {
-    class Food {
-        constructor(name){
-            this.name = name;
-            this.brands = [];
-        }
-        addBrand(brand){
-            this.brands.push(brand);
-        }
-        print(){
-            log(`${this.name} 을 하는 음식점들`)
-            log(this.brands.join(', '));
-        }
+    log('start spread and rest');
+    function max(...a){
+       return a.reduce((prev,curr)=> prev>curr?curr:prev,0)
     }
-
-    const pizza = new Food('피자');
-    pizza.addBrand('피자헛');
-    pizza.addBrand('도미너 피자');
-
-    const chicken = new Food('치킨');
-    chicken.addBrand('굽네치킨');
-    chicken.addBrand('네네치킨');
-
-    pizza.print();
-    chicken.print();
-    log(pizza);
-    log(chicken);
+    function average(...a){
+        const sum= a.reduce((prev,curr)=> prev+curr,0)
+        const aver = sum/a.length;
+        return aver;
+    }
+    
+    const number = [5,5,5]
+    const result = max(...number);
+    const result2 = average(...number);
+    log(result2);
 
 
 
 
-  
 
 
 }

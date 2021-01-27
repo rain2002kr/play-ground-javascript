@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS 리셋 코드  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+  <link rel="stylesheet" href="css/10.css" />
+
+  <link rel="icon" href="favicon.ico" />
+
+  <title>aync and defer</title>
+  <script src="src/11.spared_rest.js" defer></script>
+  <!-- <script src="src/06-1.array2.js" defer></script> -->
+</head>
+
+<body>
+  <div class="container">
+    <header id="header"></header>
+    <header>
+      <h1>
+        <a href="index.html">JS </a>
+      </h1>
+    </header>
+    <main>
+      <div class="content">
+        <h2>비구조화 할당 & spread and rest 문법 </h2>
+        <h4>1. 비구조화 할당.</h4>
+        <ul>
+          <li>
+            <p>비구조화 할당은 오브젝트 및 배열의 요소를 분해하는데 사용 한다.</p>
+            <p>const person = {name:"이경훈", age:39}</p>
+            <p>const {name, age} = person</p>
+            <p>위와 같이 간단하게 사용</p>
+            <p>중첩 구조라고 해도 몇번의 분해로 바로 인자값들을 가져올수 있다.</p>
+          </li>
+        </ul>
+        <h4>2. spread 문법</h4>
+        <ul>
+          <li>
+            <p>spread 문법은 객체 혹은 배열에 값을 그대로 가져와서 새로운 객체 혹은 배열을 사용할때 사용한다.</p>
+            <p>const tbs = {type:"machine",name:"abs"}</p>
+            <p>const tbs = {...tbs, addition:4}</p>
+            <p>const arr = [1,2,3,4,5]</p>
+            <p>const [one,two, ...rest] = arr</p>
+          </li>
+        </ul>
+        <h4>3. rest 문법 </h4>
+        <ul>
+          <li>
+            <p>rest 문법은 객체 혹은 배열에 값을, 분해할당으로 가져가고 나머지를 가져오는데 사용된다. </p>
+            <p>const tbs = {type:"machine",name:"abs",addition:4}</p>
+            <p>const {type, ...rest} = tbs</p>
+            <p>이때 rest 는 분해할당과 다르게 이름을 바꿀수 있다.</p>
+
+          </li>
+        </ul>
+
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
