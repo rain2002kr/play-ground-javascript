@@ -5,6 +5,7 @@ const log = (m) => {
 const clr = () => {
     console.clear()
 };
+// async await 문법 에서는 화살표 함수 사용하지 말것 
 // 1. Async 문법 
 {
     function login(id) {

@@ -1,4 +1,3 @@
-'use stric';
 'use strict'
 const log = (m) => {
     console.log(m)
